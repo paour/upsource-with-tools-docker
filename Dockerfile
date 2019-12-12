@@ -17,8 +17,9 @@ RUN apt-get update && \
     apt-get update && apt-get install -y yarn && \
 # install nodejs
     curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
-    apt-get install -y nodejs
-    
+    apt-get install -y nodejs && \
+# install unzip
+    apt-get install -y zip    
 # install Android tools
 ENV ANDROID_HOME=/opt/android-sdk-linux
 ENV PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools
